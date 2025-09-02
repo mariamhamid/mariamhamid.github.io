@@ -1,10 +1,9 @@
-<!-- Updated HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junior AI Engineer Portfolio</title>
+    <title>AI Engineer Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -18,38 +17,38 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; }
         .particle { position: absolute; width: 2px; height: 2px; background: #3b82f6; border-radius: 50%; animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; } 50% { transform: translateY(-20px) rotate(180deg); opacity: 1; } }
+        @keyframes float { 0%,100%{transform:translateY(0) rotate(0); opacity:0.7;} 50%{transform:translateY(-20px) rotate(180deg); opacity:1;} }
         header { padding: 2rem 0; text-align: center; position: relative; }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; animation: glow 2s ease-in-out infinite alternate; }
-        @keyframes glow { from { filter: brightness(1); } to { filter: brightness(1.2); } }
-        .hero p { font-size: 1.3rem; color: #94a3b8; margin-bottom: 2rem; }
-        .cta-button { display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4); }
-        nav { display: flex; justify-content: center; margin: 2rem 0; }
-        .nav-pills { display: flex; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border-radius: 25px; padding: 5px; }
-        .nav-pill { padding: 10px 20px; margin: 0 2px; border-radius: 20px; cursor: pointer; transition: all 0.3s ease; font-weight: 500; }
-        .nav-pill.active { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; }
-        .nav-pill:hover:not(.active) { background: rgba(59, 130, 246, 0.2); }
-        .section { display: none; animation: fadeIn 0.5s ease-in; }
-        .section.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .card { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 15px; padding: 2rem; margin-bottom: 2rem; transition: all 0.3s ease; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); border-color: rgba(59, 130, 246, 0.4); }
-        .card h3 { color: #3b82f6; margin-bottom: 1rem; font-size: 1.4rem; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-        .skill-item { background: rgba(30, 41, 59, 0.6); border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; border: 1px solid rgba(59, 130, 246, 0.2); }
-        .skill-item:hover { transform: scale(1.05); border-color: rgba(59, 130, 246, 0.5); }
-        .skill-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
-        .contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(30, 41, 59, 0.6); border-radius: 10px; transition: all 0.3s ease; }
-        .contact-item:hover { background: rgba(59, 130, 246, 0.1); }
-        .contact-icon { font-size: 1.5rem; color: #3b82f6; }
-        footer { text-align: center; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid rgba(59, 130, 246, 0.2); color: #64748b; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .nav-pills { flex-wrap: wrap; } .skills-grid { grid-template-columns: 1fr; } }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: rgba(30, 41, 59, 0.3); }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 4px; }
+        .hero h1 { font-size:3.5rem; font-weight:800; background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4); background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:1rem; animation:glow 2s ease-in-out infinite alternate; }
+        @keyframes glow { from {filter:brightness(1);} to{filter:brightness(1.2);} }
+        .hero p { font-size:1.3rem; color:#94a3b8; margin-bottom:2rem; }
+        .cta-button { display:inline-block; padding:12px 30px; background: linear-gradient(135deg,#3b82f6,#8b5cf6); color:white; text-decoration:none; border-radius:25px; font-weight:600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(59,130,246,0.3);}
+        .cta-button:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(59,130,246,0.4);}
+        nav { display:flex; justify-content:center; margin:2rem 0;}
+        .nav-pills { display:flex; background: rgba(30,41,59,0.5); backdrop-filter:blur(10px); border-radius:25px; padding:5px;}
+        .nav-pill { padding:10px 20px; margin:0 2px; border-radius:20px; cursor:pointer; transition: all 0.3s ease; font-weight:500;}
+        .nav-pill.active { background: linear-gradient(135deg,#3b82f6,#8b5cf6); color:white;}
+        .nav-pill:hover:not(.active){ background: rgba(59,130,246,0.2);}
+        .section { display:none; animation:fadeIn 0.5s ease-in;}
+        .section.active { display:block;}
+        @keyframes fadeIn { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+        .card { background: rgba(30,41,59,0.6); backdrop-filter:blur(10px); border:1px solid rgba(59,130,246,0.2); border-radius:15px; padding:2rem; margin-bottom:2rem; transition: all 0.3s ease;}
+        .card:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.3); border-color: rgba(59,130,246,0.4);}
+        .card h3 { color:#3b82f6; margin-bottom:1rem; font-size:1.4rem;}
+        .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem; margin:2rem 0;}
+        .skill-item { background: rgba(30,41,59,0.6); border-radius:10px; padding:1.5rem; text-align:center; transition: all 0.3s ease; border:1px solid rgba(59,130,246,0.2);}
+        .skill-item:hover { transform:scale(1.05); border-color: rgba(59,130,246,0.5);}
+        .skill-icon { font-size:2.5rem; margin-bottom:1rem;}
+        .contact-info { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:1rem; margin:2rem 0; }
+        .contact-item { display:flex; align-items:flex-start; gap:1rem; padding:1rem; background: rgba(30,41,59,0.6); border-radius:10px; transition: all 0.3s ease; }
+        .contact-item:hover { background: rgba(59,130,246,0.1);}
+        .contact-icon { font-size:1.5rem; color:#3b82f6; margin-top:4px; }
+        .contact-item div { word-wrap: break-word; overflow-wrap: anywhere; } /* <-- Fix long links */
+        footer { text-align:center; padding:3rem 0; margin-top:4rem; border-top:1px solid rgba(59,130,246,0.2); color:#64748b;}
+        @media (max-width:768px) { .hero h1 { font-size:2.5rem;} .nav-pills { flex-wrap:wrap;} .skills-grid { grid-template-columns:1fr;} }
+        ::-webkit-scrollbar { width:8px; }
+        ::-webkit-scrollbar-track { background: rgba(30,41,59,0.3);}
+        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg,#3b82f6,#8b5cf6); border-radius:4px;}
     </style>
 </head>
 <body>
@@ -110,7 +109,7 @@
                         <div class="contact-icon">📧</div>
                         <div>
                             <strong>Email</strong><br>
-                            <span style="color: #94a3b8;">mariamhamid616@gmail.com</span>
+                            <span style="color:#94a3b8;">mariamhamid616@gmail.com</span>
                         </div>
                     </div>
 
@@ -118,7 +117,7 @@
                         <div class="contact-icon">💼</div>
                         <div>
                             <strong>LinkedIn</strong><br>
-                            <span style="color: #94a3b8;">https://www.linkedin.com/in/mariam-hamid/</span>
+                            <span style="color:#94a3b8;">https://www.linkedin.com/in/mariam-hamid/</span>
                         </div>
                     </div>
 
@@ -126,7 +125,7 @@
                         <div class="contact-icon">🐙</div>
                         <div>
                             <strong>GitHub</strong><br>
-                            <span style="color: #94a3b8;">https://github.com/mariamhamid</span>
+                            <span style="color:#94a3b8;">https://github.com/mariamhamid</span>
                         </div>
                     </div>
 
@@ -134,7 +133,7 @@
                         <div class="contact-icon">🌟</div>
                         <div>
                             <strong>Portfolio</strong><br>
-                            <span style="color: #94a3b8;">mariamhamid.github.io</span>
+                            <span style="color:#94a3b8;">mariamhamid.github.io</span>
                         </div>
                     </div>
                 </div>
@@ -158,18 +157,18 @@
     function createParticles() {
         const particlesContainer = document.getElementById('particles');
         const particleCount = 50;
-        for (let i = 0; i < particleCount; i++) {
+        for(let i=0;i<particleCount;i++){
             const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 6 + 's';
-            particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            particle.className='particle';
+            particle.style.left=Math.random()*100+'%';
+            particle.style.top=Math.random()*100+'%';
+            particle.style.animationDelay=Math.random()*6+'s';
+            particle.style.animationDuration=(Math.random()*3+3)+'s';
             particlesContainer.appendChild(particle);
         }
     }
 
-    document.querySelector('.cta-button').addEventListener('click', function(e) {
+    document.querySelector('.cta-button').addEventListener('click', function(e){
         e.preventDefault();
         showSection('contact');
         document.querySelectorAll('.nav-pill').forEach(pill => pill.classList.remove('active'));
@@ -180,3 +179,4 @@
 </script>
 </body>
 </html>
+
